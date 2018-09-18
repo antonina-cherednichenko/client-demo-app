@@ -8,7 +8,7 @@
 const config = require("../config");
 const app = require('../app');
 const Models = require("../models");
-const debug = require('debug')('radiantearth:server');
+const debug = require('debug')('clientdemo:server');
 const http = require('http');
 
 /**
