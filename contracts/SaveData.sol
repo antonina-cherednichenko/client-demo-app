@@ -12,7 +12,7 @@ contract SaveData is Ownable {
     uint field2;
   }
 
-  mapping(address => Data[]) allData;
+  mapping(address => Data[]) public allData;
 
   event LogDataSaved(
      address indexed user,
@@ -28,6 +28,15 @@ contract SaveData is Ownable {
 
     emit LogDataSaved(msg.sender, field1, field2);
     return true;
+  }
+
+  function getLatest()
+    public
+    view
+    returns (uint field1, uint field2)
+  {
+    Data lastElement = allData[msg.sender][allData[msg.sender].length - 1];
+    return (lastElement.field1, lastElement.field2);
   }
 
 }
