@@ -19,3 +19,6 @@
 
 ### To run tests
 `truffle test`
+
+### Demo
+<img src='https://github.com/antonina-cherednichenko/client-demo-app/blob/master/save_data_demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
